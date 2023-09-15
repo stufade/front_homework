@@ -1,0 +1,69 @@
+/* Стили для header */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #838383;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav>ul {
+  padding: 0;
+}
+
+nav>ul>li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Стили для main */
+main {
+  margin: 20px;
+}
+
+section,
+aside {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #DCDCDC;
+}
+
+section.description-list {
+  border: 1px solid black;
+}
+
+#article {
+  padding: 20px;
+  border: 1px solid #DCDCDC;
+}
+
+/* Стили для footer */
+footer {
+  background-color: #838383;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* Оранжевый цвет при наведении */
+nav a:hover {
+  color: #ff4500;
+}
+
+/* Красный цвет при активации (нажатии) */
+nav a:active {
+  color: #ff0000;
+}
+
+/* Фиолетовый цвет для посещенных ссылок */
+nav a:visited {
+  color: #800080;
+}
