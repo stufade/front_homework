@@ -1,0 +1,111 @@
+/* Стили для header */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #838383;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+nav {
+  position: relative;
+}
+
+nav>ul {
+  padding: 0;
+  list-style: none;
+}
+
+nav>ul>li {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Стили для main */
+main {
+  margin: 20px;
+}
+
+section,
+aside {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #DCDCDC;
+}
+
+section.description-list {
+  border: 1px solid black;
+}
+
+#article {
+  padding: 20px;
+  border: 1px solid #DCDCDC;
+}
+
+/* Стили для footer */
+footer {
+  background-color: #838383;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Оранжевый цвет при наведении */
+nav a:hover {
+  color: #ff4500;
+}
+
+/* Красный цвет при активации (нажатии) */
+nav a:active {
+  color: #ff0000;
+}
+
+/* Фиолетовый цвет для посещенных ссылок */
+nav a:visited {
+  color: #800080;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 20px;
+}
+
+.img-map {
+  float: left;
+  padding-right: 20px;
+}
+
+.img-link {
+  float: right;
+  padding-left: 20px;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.go-up {
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background-color: aqua;
+  position: fixed;
+  width: 50px;
+}
+
+.article-title {
+  position: sticky;
+  top: 0;
+}
