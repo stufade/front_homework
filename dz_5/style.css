@@ -1,0 +1,244 @@
+/* Стили для header */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #838383;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+nav {
+  position: relative;
+}
+
+nav>ul {
+  padding: 0;
+  list-style: none;
+}
+
+nav>ul>li {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Стили для main */
+main {
+  margin: 20px;
+}
+
+section,
+aside {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #DCDCDC;
+}
+
+section.description-list {
+  border: 1px solid black;
+}
+
+#article {
+  padding: 20px;
+  border: 1px solid #DCDCDC;
+}
+
+/* Стили для footer */
+footer {
+  background-color: #838383;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Оранжевый цвет при наведении */
+nav a:hover {
+  color: #ff4500;
+}
+
+/* Красный цвет при активации (нажатии) */
+nav a:active {
+  color: #ff0000;
+}
+
+/* Фиолетовый цвет для посещенных ссылок */
+nav a:visited {
+  color: #800080;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 20px;
+}
+
+.img-map {
+  float: left;
+  padding-right: 20px;
+}
+
+.img-link {
+  float: right;
+  padding-left: 20px;
+}
+
+/* Стили для всей формы */
+form {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: #def4f7;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group {
+  display: block;
+  margin-bottom: 1em;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 2px solid gray;
+  padding: 0.5em;
+}
+
+/* Стили для полей ввода при фокусе */
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid #007bff;
+  outline: none;
+}
+
+/* Стили для подсказки placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+  font-weight: bold;
+}
+
+/* Стили для кнопки */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стили для iframe */
+iframe {
+  display: block;
+  margin: 1em auto;
+  border: 1px solid #ccc;
+}
+
+/* Меню */
+.menu-icon {
+  cursor: pointer;
+  width: 30px;
+  z-index: 2;
+}
+
+.menu-icon::before,
+.menu-icon::after,
+.menu-icon span {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#menu-toggle,
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle:checked+.menu-icon::before {
+  transform: rotate(45deg) translate(7.5px, 7.5px);
+  background-color: red;
+}
+
+#menu-toggle:checked+.menu-icon::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: red;
+}
+
+#menu-toggle:checked+.menu-icon span {
+  opacity: 0;
+}
+
+#menu-toggle:checked~.menu {
+  height: calc(100% - 56px - 10px - 8px);
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+#menu-toggle:checked~.menu {
+  left: 0;
+}
+
+.nav-wrapper {
+  height: 56px;
+}
+
+@media screen and (max-width: 560px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.4s;
+  }
+}
