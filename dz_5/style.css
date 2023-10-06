@@ -1,6 +1,7 @@
 /* Стили для header */
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 
 header {
@@ -9,6 +10,12 @@ header {
   padding: 10px;
   text-align: center;
   position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  top: 0;
 }
 
 nav {
@@ -81,19 +88,12 @@ nav a:visited {
 }
 
 article {
-  display: grid;
-  grid-template-columns: 5fr 1fr;
+  display: flex;
   gap: 20px;
 }
 
-.img-map {
-  float: left;
-  padding-right: 20px;
-}
-
-.img-link {
-  float: right;
-  padding-left: 20px;
+.content {
+  flex-grow: 1;
 }
 
 /* Стили для всей формы */
@@ -146,6 +146,30 @@ iframe {
   display: block;
   margin: 1em auto;
   border: 1px solid #ccc;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  aspect-ratio: 16 / 9;
+}
+
+.lists,
+.links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.list {
+  flex-grow: 1;
+}
+
+.list:first-child {
+  flex-grow: 2;
+}
+
+.link {
+  flex-grow: 1;
+  flex-basis: 25%;
 }
 
 /* Меню */
@@ -170,7 +194,7 @@ iframe {
 
 #menu-toggle,
 .menu-icon {
-  display: none;
+  visibility: hidden;
 }
 
 #menu-toggle:checked+.menu-icon::before {
@@ -187,18 +211,11 @@ iframe {
   opacity: 0;
 }
 
-#menu-toggle:checked~.menu {
-  height: calc(100% - 56px - 10px - 8px);
-}
-
-.menu {
-  display: flex;
-  gap: 1em;
-}
-
 .menu ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  gap: 1em;
 }
 
 .menu li {
@@ -219,26 +236,63 @@ iframe {
 }
 
 #menu-toggle:checked~.menu {
-  left: 0;
+  bottom: 0;
 }
 
 .nav-wrapper {
   height: 56px;
 }
 
-@media screen and (max-width: 560px) {
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.image {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
   .menu-icon {
-    display: block;
+    visibility: visible;
   }
 
   .menu {
     position: fixed;
-    bottom: 0;
+    bottom: calc(100% - 200px);
+    top: 200px;
     left: 0;
     right: 0;
-    height: 0;
-    background-color: #333;
-    overflow-x: hidden;
+    background-color: #838383;
+    overflow: hidden;
     transition: 0.4s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  .lists {
+    flex-direction: column;
+  }
+
+  .link:first-child {
+    flex-basis: 100%;
+  }
+
+  .image {
+    flex-basis: calc(50% - 20px);
   }
 }
