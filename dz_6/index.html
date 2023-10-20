@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Электронная библиотека</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/book.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/notification.css">
+</head>
+
+<body>
+  <header>
+    <!-- Добавляем логотип -->
+    <div class="nav-wrapper">
+      <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#author">Автор</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Главная секция -->
+    <article id="article">
+      <div class="content">
+        <h2 class="article-title">Главная</h2>
+
+        <!-- О нас -->
+        <section>
+          <h3>О нас</h3>
+          <p>
+            Добро пожаловать в мир знаний и литературных сокровищ с <span class="accent">Digital Library</span>! Мы -
+            это инновационная
+            электронная библиотека, созданная с целью привнести удобство и доступность в мир чтения и обучения. Наша
+            миссия - сделать богатство литературы, научных трудов и образовательных материалов доступным для каждого, в
+            любое время и в любом месте. Мы уверены, что знание и культура должны быть доступны всем, и поэтому мы
+            стремимся предоставить вам широкий спектр электронных ресурсов, объединенных в одной удобной и интуитивной
+            платформе. Давайте вместе исследовать мир слова, открывать новые горизонты и углубляться в истории и знании
+            с <span class="accent">Digital Library</span>!</p>
+        </section>
+
+        <!-- Введение -->
+        <section>
+          <h3><span class="accent">Антиутопии</span></h3>
+          <div class="book-gallery">
+            <div class="book-card">
+              <div class="book-image-wrapper">
+                <img class="book-image" src="img/1984.jpg" />
+              </div>
+              <div class="book-content">
+                <h4 class="book-title">
+                  Джордж Оруэлл - "1984"
+                </h4>
+                <p class="book-description">
+                  Роман посвящён последствиям тоталитаризма, массового наблюдения и промывания мозгов людей в
+                  тоталитарном обществе.
+                </p>
+                <button class="book-button button2">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="book-card">
+              <div class="book-image-wrapper">
+                <img class="book-image" src="img/мы.jpg" />
+              </div>
+              <div class="book-content">
+                <h4 class="book-title">
+                  Евгений Замятин - "Мы"
+                </h4>
+                <p class="book-description">
+                  Фантастический роман-антиутопия Евгения Замятина с элементами сатиры, написанный в 1920 году. Действие
+                  разворачивается приблизительно в тридцать втором веке.
+                </p>
+                <button class="book-button button3">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="book-card">
+              <div class="book-image-wrapper">
+                <img class="book-image" src="img/скотный двор.jpg" />
+              </div>
+              <div class="book-content">
+                <h4 class="book-title">
+                  Джордж Оруэлл - "Скотный двор"
+                </h4>
+                <p class="book-description">
+                  В повести изображена эволюция общества животных, изгнавших со скотного двора его предыдущего
+                  владельца, жестокого мистера Джонса, от безграничной свободы к диктатуре свиньи по кличке Наполеон
+                </p>
+                <button class="book-button button1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+
+      <form method="POST" action="submit.php">
+        <fieldset>
+          <legend>Форма регистрации</legend>
+
+          <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required minlength="6">
+          </div>
+
+          <div class="form-group">
+            <label for="avatar">Загрузить аватар:</label>
+            <input type="file" id="avatar" name="avatar" accept="image/*">
+          </div>
+
+          <div class="form-group">
+            <label>Пол:</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женский</label>
+          </div>
+
+          <div class="form-group">
+            <label>Интересы:</label>
+            <input type="checkbox" id="hiking" name="interests[]" value="hiking">
+            <label for="hiking">Пеший туризм</label>
+            <input type="checkbox" id="biking" name="interests[]" value="biking">
+            <label for="biking">Велосипед</label>
+          </div>
+
+          <div class="form-group">
+            <label for="birthdate">Дата рождения:</label>
+            <input type="datetime-local" id="birthdate" name="birthdate">
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Комментарии:</label>
+            <textarea id="comments" name="comments" cols="30" rows="5" placeholder="Оставьте комментарий" minlength="10"
+              maxlength="200" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Выберите страну:</label>
+            <select id="country" name="country" multiple required size="3">
+              <option value="usa">США</option>
+              <option value="canada">Канада</option>
+              <option value="uk">Великобритания</option>
+              <option value="australia">Австралия</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="button4"><span>Отправить</span><svg viewBox="-5 -5 110 110"
+                preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0" />
+              </svg></button>
+            <input type="submit"></input>
+          </div>
+        </fieldset>
+      </form>
+      <div class="video">
+        <div class="video-content">
+          <h4 class="video-title">
+            Видео
+          </h4>
+          <p class="video-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quisquam.
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/8jLOx1hD3_o" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </article>
+    <div class="notification">
+      <ul class="notification-list">
+        <li class="notification-content">
+          Уведомление 1
+        </li>
+        <li class="notification-content">
+          Уведомление 2
+        </li>
+        <li class="notification-content">
+          Уведомление 3
+        </li>
+      </ul>
+      <img class="notification-image" src="img/bell.svg" height="24" width="24">
+    </div>
+  </main>
+
+  <footer>
+    <address id="author">
+      Разработано: Сулеймановым Артемом<br>
+      Email: <a href="mailto:info@example.com">info@example.com</a>
+    </address>
+  </footer>
+</body>
+
+</html>

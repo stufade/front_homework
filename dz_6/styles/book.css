@@ -1,0 +1,75 @@
+.book-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-card {
+  max-width: 300px;
+  position: relative;
+}
+
+.book-title {
+  margin-bottom: 0;
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: 0.7s;
+}
+
+.book-image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.book-card:hover .book-content {
+  opacity: 1;
+}
+
+.book-card:hover .book-image {
+  transform: scale(1.05);
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: var(--my-white);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, var(--my-blue) 10%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: 0.7s;
+  padding: 10px;
+}
+
+/* Видео */
+.video {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.video:hover .video-content {
+  opacity: 1;
+  transform: translate(1em, 1em);
+}
+
+.video-content {
+  opacity: 0;
+  transition: 0.7s;
+  position: absolute;
+  padding: 2em;
+  max-width: 15em;
+  background-color: var(--my-blue);
+  color: var(--my-white);
+}

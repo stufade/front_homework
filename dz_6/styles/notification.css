@@ -1,0 +1,37 @@
+.notification {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
+.notification:hover .notification-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notification-list {
+  opacity: 0;
+  visibility: hidden;
+  flex-direction: column;
+  gap: 1em;
+  color: var(--my-white);
+  background-color: var(--my-orange);
+  transition: 0.7s;
+  padding: 1em;
+}
+
+.notification-content {
+  padding: 1em;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.notification-content:hover {
+  background-color: var(--my-blue);
+}
+
+.notification-image {
+  background: var(--my-orange);
+  padding: 1em;
+  border-radius: 100%;
+}
