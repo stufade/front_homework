@@ -1,0 +1,49 @@
+.nav-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 2rem;
+}
+
+.social-button {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1em #121212;
+    padding: 1em;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.social-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+    z-index: -1;
+    transition: height 1.5s ease-in-out;
+}
+
+.social-button:hover::before {
+    height: 100%;
+}
+
+.social-button span {
+    position: relative;
+    z-index: 1;
+}
+
+img {
+    height: 56px;
+    width: 56px;
+}
