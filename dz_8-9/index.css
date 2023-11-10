@@ -1,0 +1,51 @@
+:root {
+    --my-blue: #14213d;
+    --my-orange: #fca311;
+    --my-gray: #e5e5e5;
+    --my-white: #ffffff;
+    --my-black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: rgb(32, 30, 44);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pw9 {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.pw9 button {
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+}
+
+.pw9 button:hover {
+    filter: brightness(80%);
+}
+
+.like-button {
+    transition: 0.2s ease-in-out;
+}
+
+.like-button .fa-heart {
+    background-color: transparent;
+    color: inherit;
+}
+
+.like-button.active {
+    background-color: #ed0b0b;
+    color: white;
+}

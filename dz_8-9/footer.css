@@ -1,0 +1,119 @@
+footer {
+    display: grid;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 2rem;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    grid-template-areas:
+        "about-us quick-links shop contact-us"
+        "copyright copyright copyright copyright";
+    place-items: stretch;
+    gap: 1rem;
+    --primary-color: var(--my-orange);
+}
+
+footer * {
+    background-color: transparent;
+}
+
+footer > div {
+    margin: 0.5rem;
+}
+
+footer h3 {
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 3rem;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: 0.5s ease-in-out;
+}
+
+footer > div:hover h3::after {
+    width: 100%;
+}
+
+footer li {
+    margin-bottom: 0.5rem;
+}
+
+footer li {
+    transition: 0.5s ease-in-out;
+}
+
+footer li a {
+    transition: 0.5s ease-in-out;
+}
+
+footer li:hover {
+    transform: translateX(0.5rem);
+}
+
+footer li:hover a {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.about-us {
+    grid-area: about-us;
+}
+
+.quick-links {
+    grid-area: quick-links;
+}
+
+.shop {
+    grid-area: shop;
+}
+
+.contact-us {
+    grid-area: contact-us;
+}
+
+.contact-us span {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.copyright {
+    display: flex;
+    margin: 0;
+    grid-area: copyright;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--my-blue);
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    footer {
+        grid-template-rows: 1fr 1fr 2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "about-us quick-links"
+            "shop contact-us"
+            "copyright copyright";
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        grid-template-rows: auto repeat(3, 1fr) 2rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about-us"
+            "quick-links"
+            "shop"
+            "contact-us"
+            "copyright";
+    }
+}

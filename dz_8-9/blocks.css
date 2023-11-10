@@ -1,0 +1,95 @@
+.blocks {
+    display: grid;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "block1 block1 block2 block3"
+        "block4 block5 block2 block6"
+        "block4 block7 block7 block7";
+    place-items: stretch;
+    gap: 1rem;
+}
+
+.block {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--my-blue);
+    transition: 0.5s ease-in-out;
+}
+
+.block:hover {
+    background-color: var(--my-orange);
+}
+
+.block * {
+    text-align: center;
+    background-color: transparent;
+}
+
+.block i {
+    font-size: 75px;
+}
+
+.block1 {
+    grid-area: block1;
+}
+
+.block2 {
+    grid-area: block2;
+}
+
+.block3 {
+    grid-area: block3;
+}
+
+.block4 {
+    grid-area: block4;
+}
+
+.block5 {
+    grid-area: block5;
+}
+
+.block6 {
+    grid-area: block6;
+}
+
+.block7 {
+    grid-area: block7;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .blocks {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "block1 block2"
+            "block3 block4"
+            "block5 block6"
+            "block7 block7";
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blocks {
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "block1"
+            "block2"
+            "block3"
+            "block4"
+            "block5"
+            "block6"
+            "block7";
+    }
+}
