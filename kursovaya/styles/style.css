@@ -1,0 +1,315 @@
+/* Стили для header */
+:root {
+  --my-blue: #14213d;
+  --my-orange: #fca311;
+  --my-gray: #e5e5e5;
+  --my-white: #ffffff;
+  --my-black: #000000;
+  --header-height: 100px;
+  --footer-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+header {
+  z-index: 100;
+  background-color: var(--my-blue);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Стили для main */
+main {
+  margin: 20px;
+}
+
+section,
+aside {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #DCDCDC;
+}
+
+section.description-list {
+  border: 1px solid black;
+}
+
+#article {
+  padding: 20px;
+  border: 1px solid #DCDCDC;
+}
+
+/* Стили для footer */
+footer {
+  background-color: var(--my-blue);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  height: var(--footer-heigth);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+/* Стили для кнопки */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  cursor: pointer;
+}
+
+.lists,
+.links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.list {
+  flex-grow: 1;
+}
+
+.list:first-child {
+  flex-grow: 2;
+}
+
+.link {
+  flex-grow: 1;
+  flex-basis: 25%;
+}
+
+/* Меню */
+.menu-icon {
+  cursor: pointer;
+  width: 30px;
+  z-index: 2;
+}
+
+.menu-icon::before,
+.menu-icon::after,
+.menu-icon span {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--my-orange);
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#menu-toggle,
+.menu-icon {
+  visibility: hidden;
+}
+
+#menu-toggle:checked+.menu-icon::before {
+  transform: rotate(45deg) translate(7.5px, 7.5px);
+  background-color: red;
+}
+
+#menu-toggle:checked+.menu-icon::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: red;
+}
+
+#menu-toggle:checked+.menu-icon span {
+  opacity: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.menu li {
+  text-align: center;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--my-white);
+  font-size: 18px;
+  display: block;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background-color: var(--my-gray);
+  color: var(--my-orange);
+}
+
+#menu-toggle:checked~.menu {
+  bottom: 0;
+}
+
+.nav-wrapper {
+  height: 56px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.image {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .menu-icon {
+    visibility: visible;
+  }
+
+  .menu {
+    position: fixed;
+    bottom: calc(100% - var(--header-height));
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--my-blue);
+    overflow: hidden;
+    transition: 0.4s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  .lists {
+    flex-direction: column;
+  }
+
+  .link:first-child {
+    flex-basis: 100%;
+  }
+
+  .image {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+.accent {
+  color: var(--my-orange);
+  font-weight: bold;
+}
+
+.footer-link {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.footer-link:hover {
+  color: var(--my-orange);
+}
+
+/* Книга на главной */
+
+.book-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-card {
+  max-width: 300px;
+  position: relative;
+}
+
+.book-title {
+  margin-bottom: 0;
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: 0.7s;
+}
+
+.book-image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.book-card:hover .book-content {
+  opacity: 1;
+}
+
+.book-card:hover .book-image {
+  transform: scale(1.05);
+}
+
+.book-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: var(--my-white);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, var(--my-blue) 10%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: 0.7s;
+  padding: 10px;
+}

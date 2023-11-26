@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Электронная библиотека</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/book.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/notification.css">
+</head>
+
+<body>
+  <header>
+    <!-- Добавляем логотип -->
+    <div class="nav-wrapper">
+      <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#author">Автор</a></li>
+          <li><a href="/me" id="account">Аноним</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Главная секция -->
+    <article id="article">
+      <div class="content">
+        <h2 class="article-title">Главная</h2>
+
+        <!-- О нас -->
+        <section>
+          <h3>О нас</h3>
+          <p>
+            Добро пожаловать в мир знаний и литературных сокровищ с <span class="accent">Digital Library</span>! Мы -
+            это инновационная
+            электронная библиотека, созданная с целью привнести удобство и доступность в мир чтения и обучения. Наша
+            миссия - сделать богатство литературы, научных трудов и образовательных материалов доступным для каждого, в
+            любое время и в любом месте. Мы уверены, что знание и культура должны быть доступны всем, и поэтому мы
+            стремимся предоставить вам широкий спектр электронных ресурсов, объединенных в одной удобной и интуитивной
+            платформе. Давайте вместе исследовать мир слова, открывать новые горизонты и углубляться в истории и знании
+            с <span class="accent">Digital Library</span>!</p>
+        </section>
+
+        <!-- Введение -->
+        <section>
+          <h3><span class="accent">Антиутопии</span></h3>
+          <div class="book-gallery">
+            <div class="book-card">
+              <div class="book-image-wrapper">
+                <img class="book-image" src="img/1984.jpg" />
+              </div>
+              <div class="book-content">
+                <h4 class="book-title">
+                  Джордж Оруэлл - "1984"
+                </h4>
+                <p class="book-description">
+                  Роман посвящён последствиям тоталитаризма, массового наблюдения и промывания мозгов людей в
+                  тоталитарном обществе.
+                </p>
+                <button class="book-button button2">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="book-card">
+              <div class="book-image-wrapper">
+                <img class="book-image" src="img/мы.jpg" />
+              </div>
+              <div class="book-content">
+                <h4 class="book-title">
+                  Евгений Замятин - "Мы"
+                </h4>
+                <p class="book-description">
+                  Фантастический роман-антиутопия Евгения Замятина с элементами сатиры, написанный в 1920 году. Действие
+                  разворачивается приблизительно в тридцать втором веке.
+                </p>
+                <button class="book-button button3">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="book-card">
+              <div class="book-image-wrapper">
+                <img class="book-image" src="img/скотный двор.jpg" />
+              </div>
+              <div class="book-content">
+                <h4 class="book-title">
+                  Джордж Оруэлл - "Скотный двор"
+                </h4>
+                <p class="book-description">
+                  В повести изображена эволюция общества животных, изгнавших со скотного двора его предыдущего
+                  владельца, жестокого мистера Джонса, от безграничной свободы к диктатуре свиньи по кличке Наполеон
+                </p>
+                <button class="book-button button1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    Разработано: <span class="footer-link">Сулеймановым Артемом</span><br>
+    Github: <a href="https://github.com/stufade" class="footer-link">stufade</a>
+  </footer>
+  <script src="scripts/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Электронная библиотека</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/book.css">
+</head>
+
+<body>
+  <header>
+    <!-- Добавляем логотип -->
+    <div class="nav-wrapper">
+      <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#author">Автор</a></li>
+          <li><a href="/me" id="account">Аноним</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="img-wrapper">
+      <img class="img" src="img/мы.jpg">
+    </div>
+    <div class="text-wrapper">
+      <h2 class="title">
+        Мы
+      </h2>
+      <h3 class="author">
+        Евгений Замятин
+      </h3>
+      <p class="description">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit commodi est culpa facere magni ducimus quia amet quos porro, doloribus voluptatem nesciunt at, deserunt laboriosam iusto dignissimos optio accusamus soluta.
+      </p>
+      <div class="buttons">
+      <button class="button favourite">
+        В избранное
+      </button>
+      <button class="button hate">
+        В черный список
+      </button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Разработано: <span class="footer-link">Сулеймановым Артемом</span><br>
+    Github: <a href="https://github.com/stufade" class="footer-link">stufade</a>
+  </footer>
+  <script src="scripts/common.js"></script>
+</body>
+
+</html>

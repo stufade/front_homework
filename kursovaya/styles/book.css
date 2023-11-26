@@ -1,0 +1,99 @@
+body {
+  min-height: 100vh;
+  background: var(--my-white);
+}
+
+.main {
+  margin: 0 auto;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  max-width: 1100px;
+}
+
+.img {
+  object-fit: contain;
+  width: 100%;
+  max-height: calc(100vh - var(--header-height) - var(--footer-height) - 2em);
+  display: block;
+}
+
+.img-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--my-orange)
+}
+
+.author {
+  color: var(--my-blue);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.button {
+  position: relative;
+  flex: 1;
+  border-radius: 1em;
+  padding: 1em;
+  font-size: 16px;
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+.button::before {
+  opacity: 1;
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  translate: -50%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.favourite {
+  background-color: var(--my-orange);
+}
+
+.favourite::before {
+  content: '❤️';
+}
+
+.hate {
+  background-color: var(--my-blue);
+  opacity: 0.8;
+}
+
+.hate::before {
+  content: '🚫';
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/register.css">
+  <script src="https://kit.fontawesome.com/2021c34ae2.js" crossorigin="anonymous"></script>
+  <title>Регистрация</title>
+</head>
+
+<body>
+  <header>
+    <!-- Добавляем логотип -->
+    <div class="nav-wrapper">
+      <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
+      <nav class="menu">
+        <ul>
+          <li><a href="#home">Главная</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#author">Автор</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <form action="#">
+        <h2>Регистрация</h2>
+        <div class="input-group">
+          <label for="username">Имя</label>
+          <input type="text" id="username" name="username" placeholder="Артём" required>
+        </div>
+        <div class="input-group email">
+          <label for="email">Почта</label>
+          <input type="email" id="email" name="email" placeholder="example@test.com" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="input-group confirm_password">
+          <label for="confirm_password">Подтверждение пароля</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
+        <button class="button" type="submit">Зарегистрироваться</button>
+        <div class="change">
+          У меня уже есть аккаунт
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    Разработано: <span class="footer-link">Сулеймановым Артемом</span><br>
+    Github: <a href="https://github.com/stufade" class="footer-link">stufade</a>
+  </footer>
+  <script src="scripts/common.js"></script>
+  <script src="scripts/register.js"></script>
+</body>
+
+</html>
