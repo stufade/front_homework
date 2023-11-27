@@ -7,7 +7,7 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/book.css">
+  <link rel="stylesheet" href="styles/favourites.css">
 </head>
 
 <body>
@@ -31,6 +31,18 @@
   </header>
 
   <main class="main">
+    <h2>
+      Ваши любимые книги
+    </h2>
+    <div class="custom-select">
+      <label for="sort">Как отсортировать книги?</label>
+      <select>
+        <option value="date">По дате добавления</option>
+        <option value="alf">По алфавиту</option>
+      </select>
+    </div>
+    <div class="cards">
+    </div>
   </main>
 
   <footer>
@@ -38,7 +50,7 @@
     Github: <a href="https://github.com/stufade" class="footer-link">stufade</a>
   </footer>
   <script src="scripts/common.js"></script>
-  <script src="scripts/book.js"></script>
+  <script src="scripts/favourites.js"></script>
 </body>
 
 </html>

@@ -207,7 +207,7 @@ button {
   height: auto;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .menu-icon {
     visibility: visible;
   }

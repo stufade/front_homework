@@ -40,8 +40,6 @@ submitButton.addEventListener('click', (e) => {
   } else {
     const password = getCookie('password');
     const username = getCookie('username');
-
-    console.log(stringToHash(passwordField.value), password)
     
     if (nameField.value !== username || stringToHash(passwordField.value) != password) {
       alert('Неправильный логин или пароль');

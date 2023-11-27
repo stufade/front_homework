@@ -1,0 +1,106 @@
+body {
+  min-height: 100vh;
+  background: var(--my-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding: 1em;
+  gap: 1em;
+  flex: 1;
+  max-width: 1100px;
+}
+
+.custom-select {
+  position: relative;
+  width: 200px;
+  color: var(--my-blue);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  appearance: none;
+  border: 1px solid var(--my-gray);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em  ;
+}
+
+.cards {
+  margin-top: 1em;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 300px;
+  border: 1px solid var(--my-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--my-orange);
+}
+
+.author {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.description {
+  margin-top: 0;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.img-wrapper {
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+
+.buttons-wrapper {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.button {
+  border-radius: 10px;
+  font-size: 16px;
+  transition: transform 0.4s;
+}
+
+.button:hover {
+  transform: scale(0.98);
+}
+
+.info {
+  background: var(--my-orange);
+}
+
+.unfavourite {
+  background: var(--my-blue)
+}
