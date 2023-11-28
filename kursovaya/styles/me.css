@@ -1,0 +1,89 @@
+body {
+  min-height: 100vh;
+  background: var(--my-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding: 1em;
+  gap: 1em;
+  flex: 1;
+}
+
+.input-wrapper {
+  font-size: 20px;
+
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input input {
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid var(--my-gray);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid var(--my-gray);
+  color: var(--my-blue);
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: box-shadow 0.7s;
+}
+
+.button:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card {
+  max-width: 200px;
+  position: relative;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--my-white);
+  padding: 1em;
+}
+
+.content .button {
+  color: var(--my-white);
+  margin-top: 1em;
+}
+
+.cards {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,14 @@
 "use strict";
 
 const gallery = document.querySelector('.cards');
+const sortSelect = document.querySelector('#sort');
+
+let sort = 'date';
+
+sortSelect.addEventListener('change', (e) => {
+  sort = e.target.value;
+  fill();
+})
 
 const addHandleClick = (id) => {
   const handleInfoClick = (e) => {
@@ -52,11 +60,24 @@ function createBook(book, id) {
   `;
 };
 
+function sortByAlf(favourite1, favourite2) {
+  if (favourite1.book.title > favourite2.book.title) {
+    return 1;
+  } else if (favourite2.book.title > favourite1.book.title) {
+    return -1;
+  }
+  return 0;
+}
+
 function fill() {
   gallery.innerHTML = "";
   const favouritesIds = Array.from(getFavourites());
 
-  const favouriteBooks = favouritesIds.map(id => ({ book: books[+id], id: +id }));
+  let favouriteBooks = favouritesIds.map(id => ({ book: books[+id], id: +id }));
+
+  if (sort === 'alf') {
+    favouriteBooks = favouriteBooks.sort(sortByAlf);
+  }
 
   favouriteBooks.forEach((favouriteBook) => createBook(favouriteBook.book, favouriteBook.id));
   favouriteBooks.forEach((favouriteBook) => addHandleClick(favouriteBook.id));

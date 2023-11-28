@@ -12,19 +12,19 @@
 
 <body>
   <header>
-    <!-- Добавляем логотип -->
     <div class="nav-wrapper">
-      <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      <a href="/">
+        <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      </a>
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-icon">
         <span></span>
       </label>
       <nav class="menu">
         <ul>
-          <li><a href="#home">Главная</a></li>
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#author">Автор</a></li>
-          <li><a href="/me" id="account">Аноним</a></li>
+          <li><a href="/favourites.html">Любимые книги</a></li>
+          <li><a href="/me.html">Мой аккаунт: <span id="account"></span></a></li>
+          <li><a href="/register.html" id="account">Выйти</a></li>
         </ul>
       </nav>
     </div>
@@ -36,7 +36,7 @@
     </h2>
     <div class="custom-select">
       <label for="sort">Как отсортировать книги?</label>
-      <select>
+      <select id="sort">
         <option value="date">По дате добавления</option>
         <option value="alf">По алфавиту</option>
       </select>

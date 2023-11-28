@@ -37,6 +37,28 @@ function getCookie(cname) {
   return "";
 }
 
+function getBlocked() {
+  const blockedString = getCookie('blocked');
+  const blocked = new Set(blockedString ? JSON.parse(blockedString) : []);
+
+  return blocked;
+}
+
+function addBlocked(id) {
+  const blocked = getBlocked();
+
+  blocked.add(id);
+
+  setCookie('blocked', JSON.stringify(Array.from(blocked)));
+}
+
+function deleteBlocked(id) {
+  const blocked = getBlocked();
+
+  blocked.delete(String(id));
+  setCookie('blocked', JSON.stringify(Array.from(blocked)));
+}
+
 function getFavourites() {
   const favouritesString = getCookie('favourites');
   const favourites = new Set(favouritesString ? JSON.parse(favouritesString) : []);
@@ -56,14 +78,17 @@ function deleteFavourite(id) {
   const favourites = getFavourites();
 
   favourites.delete(String(id));
-  console.log(id)
-  console.log(favourites);
 
   setCookie('favourites', JSON.stringify(Array.from(favourites)));
 }
 
 const account = document.querySelector('#account');
-account.textContent = getCookie('username') || 'Аноним';
+
+function changeName() {
+  account.textContent = getCookie('username') || 'Аноним';
+}
+
+changeName();
 
 const books = [
   {

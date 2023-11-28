@@ -14,30 +14,27 @@
 
 <body>
   <header>
-    <!-- Добавляем логотип -->
     <div class="nav-wrapper">
-      <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      <a href="/">
+        <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      </a>
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-icon">
         <span></span>
       </label>
       <nav class="menu">
         <ul>
-          <li><a href="#home">Главная</a></li>
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#author">Автор</a></li>
-          <li><a href="/me" id="account">Аноним</a></li>
+          <li><a href="/favourites.html">Любимые книги</a></li>
+          <li><a href="/me.html">Мой аккаунт: <span id="account"></span></a></li>
+          <li><a href="/register.html" id="account">Выйти</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <!-- Главная секция -->
     <article id="article">
       <div class="content">
         <h2 class="article-title">Главная</h2>
-
-        <!-- О нас -->
         <section>
           <h3>О нас</h3>
           <p>
@@ -51,7 +48,6 @@
             с <span class="accent">Digital Library</span>!</p>
         </section>
 
-        <!-- Введение -->
         <section>
           <h3><span class="accent">Антиутопии</span></h3>
           <div class="book-gallery"></div>

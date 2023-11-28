@@ -34,3 +34,8 @@ const favouriteButton = document.querySelector('.favourite');
 favouriteButton.addEventListener('click', () => {
   addFavourite(bookId);
 });
+
+const blockButton = document.querySelector('.hate');
+blockButton.addEventListener('click', () => {
+  addBlocked(bookId);
+})

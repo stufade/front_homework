@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Электронная библиотека</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/me.css">
+</head>
+
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <a href="/">
+        <img class="logo" src="icon.svg" height="56" alt="Логотип Электронной библиотеки">
+      </a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
+      <nav class="menu">
+        <ul>
+          <li><a href="/favourites.html">Любимые книги</a></li>
+          <li><a href="/me.html">Мой аккаунт: <span id="account"></span></a></li>
+          <li><a href="/register.html" id="account">Выйти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="form">
+      <div class="input-wrapper">
+        <div class="input">
+          <label for="username" class="label">Имя: </label>
+          <input id="username" type="text">
+        </div>
+        <button class="button name">Сменить имя</button>
+      </div>
+      <div class="input-wrapper">
+        <div class="input">
+          <label for="password" class="label">Пароль: </label>
+          <input id="password" type="password">
+        </div>
+        <button class="button password">Сменить пароль</button>
+      </div>
+    </div>
+    <h4>
+      Заблокированные
+    </h4>
+    <div class="cards">
+      <div class="card">
+        <div class="img-wrapper">
+          <img class="img" src="img/1984.jpg">
+        </div>
+        <div class="content">
+          <div class="title">
+            1984 - Джордж Оурэл
+          </div>
+          <button class="unblock button">
+            Разблокировать
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img-wrapper">
+          <img class="img" src="img/1984.jpg">
+        </div>
+        <div class="content">
+          <div class="title">
+            1984 - Джордж Оурэл
+          </div>
+          <button class="unblock button">
+            Разблокировать
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Разработано: <span class="footer-link">Сулеймановым Артемом</span><br>
+    Github: <a href="https://github.com/stufade" class="footer-link">stufade</a>
+  </footer>
+  <script src="scripts/common.js"></script>
+  <script src="scripts/me.js"></script>
+</body>
+
+</html>
