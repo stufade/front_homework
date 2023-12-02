@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" async></script>
+    <title>Сборник стихов</title>
+</head>
+<body>
+    <main>
+        <form id="info-form" method="post">
+            <h2>Регистрация:</h2>
+            <div>
+                <label for="name">Имя:</label>
+                <input id="name" name="name" type="text" placeholder="введите ваше имя..." required />
+            </div>
+            <div>
+                <label for="tel">Телефон:</label>
+                <input id="tel" name="tel" type="tel" pattern="[+]7-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="введите ваш телефон..." required />
+            </div>
+            <div>
+                <label for="email">Адрес электронной почты:</label>
+                <input id="emain" name="email" type="email" placeholder="введите ваш адрес электронной почты..." required />
+            </div>
+            <div>
+                <label for="password">Пароль:</label>
+                <input id="password" name="password" type="password" placeholder="введите пароль..." required />
+            </div>
+            <div>
+                <label for="file">Фото:</label>
+                <input id="file" name="file" type="file" required />
+            </div>
+
+            <fieldset>
+                <legend>Любимые стихотворные размеры:</legend>
+                <div>
+                    <label for="trochee">Хорей</label>
+                    <input id="trochee" name="foot" type="checkbox" value="trochee" />
+                </div>
+                <div>
+                    <label for="iamb">Ямб</label>
+                    <input id="iamb" name="foot" type="checkbox" value="iamb" />
+                </div>
+                <div>
+                    <label for="amphibrach">Амфибрахий</label>
+                    <input id="amphibrach" name="foot" type="checkbox" value="amphibrach" />
+                </div>
+                <div>
+                    <label for="anapaest">Анапест</label>
+                    <input id="anapaest" name="foot" type="checkbox" value="anapaest" />
+                </div>
+                <div>
+                    <label for="dactyl">Дактиль</label>
+                    <input id="dactyl" name="foot" type="checkbox" value="dactyl" />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Пол:</legend>
+                
+                <label for="male">М</label>
+                <input id="male" name="gender" type="radio" value="m" checked />
+
+                <label for="female">Ж</label>
+                <input id="female" name="gender" type="radio" value="f" />
+            </fieldset>
+
+            <div>
+                <label for="birth-date">Дата рождения:</label>
+                <input id="birth-date" name="birth-date" type="datetime-local" value="2023-09-27T00:00" 
+                    min="1900-01-01T00:00" max="2023-09-27T00:00" />
+            </div>
+
+            <div>
+                <label for="add-info">Дополнительная информация:</label>
+                <textarea id="add-info" name="add-info" rows="4" maxlength="100" minlength="5"
+                    placeholder="введите информацию о себе..." required></textarea>
+            </div>
+
+            <div>
+                <label for="pill-select">Какую таблетку ты выберешь?</label>
+                <select id="pill-select" name="pill-select" multiple size="2" required>
+                    <option value="red">Красная</option>
+                    <option value="blue">Синяя</option>
+                </select>
+            </div>
+
+            <div id="str-captcha">
+                <span>Капча:<br></span>
+                <span id="str-captcha-span"></span>
+                <input id="str-captcha-input" type="text" />
+                <button id="str-captcha-button">Проверить</button>
+            </div>
+
+            <div id="num-captcha" class="hidden">
+                <span>Капча:<br></span>
+                <span id="num-captcha-span"></span>
+                <input id="num-captcha-input" type="number" />
+                <button id="num-captcha-button">Проверить</button>
+            </div>
+
+            <input id="submit-button" type="submit" />
+
+            <button id="reset-info-form">Сбросить</button>
+        </form>
+
+        <a id="main-page-link" href="../index.html">Перейти к главной странице</a>
+    </main>
+</body>
+</html>
