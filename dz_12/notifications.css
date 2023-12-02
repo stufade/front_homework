@@ -12,9 +12,10 @@
 .notifications__center {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    left: 1rem;
 
-    background-color: #778899;
+    background-color: blue;
+    color: white;
     padding: 1rem;
     border-radius: .5rem;
 
