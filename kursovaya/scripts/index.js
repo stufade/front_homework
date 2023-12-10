@@ -1,7 +1,5 @@
 "use strict";
 
-const gallery = document.querySelector('.book-gallery');
-
 const addHandleClick = (id) => {
   const handleClick = (e) => {
     e.preventDefault();
@@ -15,6 +13,8 @@ const addHandleClick = (id) => {
 };
 
 function createBook(book, id) {
+  const gallery = document.querySelector(`.book-gallery.${book.type}`);
+
   gallery.innerHTML += `
     <div class="book-card">
       <div class="book-image-wrapper">

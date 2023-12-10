@@ -207,43 +207,6 @@ button {
   height: auto;
 }
 
-@media (max-width: 800px) {
-  .menu-icon {
-    visibility: visible;
-  }
-
-  .menu {
-    position: fixed;
-    bottom: calc(100% - var(--header-height));
-    top: var(--header-height);
-    left: 0;
-    right: 0;
-    background-color: var(--my-blue);
-    overflow: hidden;
-    transition: 0.4s;
-  }
-
-  .menu ul {
-    flex-direction: column;
-  }
-
-  article {
-    flex-direction: column;
-  }
-
-  .lists {
-    flex-direction: column;
-  }
-
-  .link:first-child {
-    flex-basis: 100%;
-  }
-
-  .image {
-    flex-basis: calc(50% - 20px);
-  }
-}
-
 .accent {
   color: var(--my-orange);
   font-weight: bold;
@@ -260,7 +223,23 @@ button {
 
 /* Книга на главной */
 
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.galleries-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.anti-utopian {
+  grid-column: 1 / 3;
+}
+
 .book-gallery {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -312,4 +291,49 @@ button {
   opacity: 0;
   transition: 0.7s;
   padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .menu-icon {
+    visibility: visible;
+  }
+
+  .menu {
+    position: fixed;
+    bottom: calc(100% - var(--header-height));
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--my-blue);
+    overflow: hidden;
+    transition: 0.4s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  .lists {
+    flex-direction: column;
+  }
+
+  .link:first-child {
+    flex-basis: 100%;
+  }
+
+  .image {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .galleries-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .anti-utopian {
+    grid-column: 1 / 2;
+  }
 }
