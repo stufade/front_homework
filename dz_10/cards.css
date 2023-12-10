@@ -1,0 +1,94 @@
+.cards5 {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10rem 0;
+}
+
+.cards5 .card {
+	display: flex;
+	flex-direction: column;
+	width: 15rem;
+	margin: 1rem;
+	background: linear-gradient(90deg, #76448A 50%, #273746  50%);
+	color: white;
+	overflow: auto;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+
+.cards5 .card h2 {
+	font-size: large;
+	margin-top: 3rem;
+	padding: 1rem 1rem 0.25rem;
+	z-index: 2;
+}
+
+.cards5 .card h1 {
+	position: absolute;
+	top: 7rem;
+	right: 1.5rem;
+	color: #1F51FF;
+	font-size: 4rem;
+	font-weight: bold;
+	opacity: 0;
+	transition: 1s;
+	z-index: 2;
+}
+
+.cards5 .card:hover h1 {
+	opacity: 1;
+	top: 0rem;
+}
+
+.cards5 .card p {
+	padding: 0 1rem 1rem;
+	z-index: 2;
+}
+
+.cards5 .card button {
+	padding: 0.5rem 2rem;
+	margin: 0 3rem 5rem;
+	background: white;
+	color: #273746;
+	border: none;
+	font-size: normal;
+	font-weight: bold;
+	z-index: 2;
+}
+
+.cards5 .card::before {
+	content: "";
+	position: absolute;
+	width: 9rem;
+	left: 4.5rem;
+	top: -50%;
+	height: 200%;
+	background: transparent;
+	animation: rotate 4s linear infinite;
+	transition: 0.5s ease-out;
+}
+
+.cards5 .card:hover::before {
+	background: linear-gradient(90deg, #1F51FF, #000080);
+}
+
+.cards5 .card::after {
+	content: "";
+	position: absolute;
+	background: linear-gradient(90deg, #76448A 50%, #273746  50%);;
+	inset: 5px;
+	border-radius: 1rem;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

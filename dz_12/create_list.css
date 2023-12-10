@@ -1,0 +1,8 @@
+.create_list__wrapper {
+    margin-top: 5rem;
+}
+
+.create_list__list {
+    border: 2px solid black;
+    border-radius: .5rem;
+}

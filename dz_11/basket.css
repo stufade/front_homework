@@ -1,0 +1,102 @@
+.basket__container {
+    width: 80%;
+    margin: 4rem auto;
+    padding: 1rem;
+
+    border: .2rem solid black;
+    border-radius: 1rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    position: relative;
+}
+
+.basket__container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.basket__title {
+    margin: 0.5rem auto 1.5rem;
+}
+
+.basket__add-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    margin: 0 auto;
+}
+
+.basket__clear-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem; 
+}
+
+.basket__total {
+    position: absolute;
+}
+
+.basket__sort {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+}
+
+.basket__filter {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #E5E4E2;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+.item__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.item__title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.item__controls {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.item__change-quantity {
+    display: flex;
+    flex-direction: column;
+}
+
+.item__change-quantity button {
+    margin: -.5rem;
+}
+
+.item__quantity-change {
+    display: flex;
+    flex-direction: column;
+}
+
+.item__delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
