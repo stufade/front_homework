@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    color: #424242;
+    background-color: #e4e6eb;
+}
+
+.scrollable-content {
+    height: 1500px;
+    width: 100%;
+}

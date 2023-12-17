@@ -1,0 +1,15 @@
+#gallery {
+    width: 700px;
+}
+
+#gallery > img {
+    width: 100%;
+}
+
+#gallery div {
+    display: flex;
+}
+
+#gallery div img {
+    width: calc(100% / 3);
+}

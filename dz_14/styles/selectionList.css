@@ -1,0 +1,10 @@
+#selection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#selection-list li.selected {
+    color: seagreen;
+}

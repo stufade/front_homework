@@ -1,0 +1,43 @@
+.slider {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.slider div {
+    position: relative;
+    width: 200px;
+    height: 3px;
+    background-color: grey;
+}
+
+.slider div::before, .slider div::after {
+    content: '';
+    position: absolute;
+    top: calc((100% - 10px) / 2);
+    width: 3px;
+    height: 10px;
+    background-color: inherit;
+    border-radius: 1px;
+}
+
+.slider div::before {
+    left: 0;
+}
+
+.slider div::after {
+    right: 0;
+}
+
+.slider span {
+    position: absolute;
+    top: calc((100% - 20px) / 2);
+    width: 10px;
+    height: 20px;
+    background-color: seagreen;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.slider span:hover {
+    filter: brightness(80%);
+}

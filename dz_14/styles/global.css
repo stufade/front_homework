@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+button:hover {
+    filter: brightness(90%);
+}
+
+.wrapper {
+    margin: 2rem;
+    padding: 0 1rem;
+    border-left: 1px solid grey;
+}
