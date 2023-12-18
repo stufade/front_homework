@@ -33,7 +33,7 @@
     top: calc((100% - 20px) / 2);
     width: 10px;
     height: 20px;
-    background-color: seagreen;
+    background-color: blue;
     border-radius: 5px;
     z-index: 1;
 }

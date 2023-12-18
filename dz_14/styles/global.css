@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -24,6 +25,6 @@ button:hover {
 
 .wrapper {
     margin: 2rem;
-    padding: 0 1rem;
-    border-left: 1px solid grey;
+    padding: 5rem 1rem;
+    border-top: 10px solid black;
 }
