@@ -1,8 +1,8 @@
 let height = 1000;
 
 function createDiv() {
-  const div = document.createElement('div');
-  div.style.height = 500 + 'px';
+  const div = document.createElement("div");
+  div.style.height = 500 + "px";
   div.textContent = `Высота: ${height + 500}px`;
   return div;
 }
@@ -18,4 +18,4 @@ function handleScroll() {
   }
 }
 
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);
